@@ -50,12 +50,20 @@ class _inicioState extends State<inicio> {
 
   @override
   Widget build(BuildContext context) {
+    final title = Container(
+      child: const Text(
+        "Programa manual",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+            fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black),
+      ),
+    );
     return Scaffold(
       appBar: AppBar(
         title: Text('LizarazuApp'),
       ),
       body: ListView(children: <Widget>[
-        Text("Programa manual"),
+        title,
         TextFormField(
           controller: idController,
           readOnly: true,
